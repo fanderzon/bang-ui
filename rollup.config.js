@@ -9,7 +9,8 @@ export default {
   moduleName: 'bang-ui',
   plugins: [
     buble({
-      jsx: 'createElement'
+      jsx: 'createElement',
+      objectAssign: 'Object.assign'
     }),
     // uglify(),
     nodeResolve({
