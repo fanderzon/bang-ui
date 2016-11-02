@@ -10,9 +10,7 @@ export default () => (
 styles = {
   container: {
     width: '100%',
-    maxHeight: '50px',
-    flexGrow: 1,
-    backgroundColor: TERTIARY_COLOR,
-    borderBottom: `2px solid ${BORDER_COLOR}`
+    flexGrow: 4,
+    backgroundColor: TERTIARY_COLOR
   }
 };
