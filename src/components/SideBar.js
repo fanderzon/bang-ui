@@ -17,7 +17,10 @@ styles = {
   container: {
     width: '280px',
     flexGrow: 1,
-    backgroundColor: SECONDARY_COLOR
+    backgroundColor: SECONDARY_COLOR,
+    ...(SCREEN_SIZE.smartphone && {
+      width: '0px',
+    })
   },
   tabs: {
     width: '50px',
