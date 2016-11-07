@@ -1,4 +1,5 @@
-import createElement from 'inferno-create-element';
+import React from 'react';
+
 import { SCREEN_SIZE, PRIMARY_COLOR, SECONDARY_COLOR } from '../style';
 
 let styles;

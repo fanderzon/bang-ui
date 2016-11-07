@@ -1,4 +1,4 @@
-import createElement from 'inferno-create-element';
+import React from 'react';
 
 import SideBar, { SideBarTabs } from './SideBar';
 import Content from './Content';

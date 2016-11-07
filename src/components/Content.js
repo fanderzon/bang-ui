@@ -1,4 +1,5 @@
-import createElement from 'inferno-create-element';
+import React from 'react';
+
 import { TERTIARY_COLOR, BORDER_COLOR } from '../style';
 
 let styles;

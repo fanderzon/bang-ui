@@ -1,9 +1,9 @@
-import InfernoDOM from 'inferno-dom';
-import createElement from 'inferno-create-element';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import App from './App';
 
-InfernoDOM.render(
+ReactDOM.render(
   <App />,
   document.getElementById("app")
 );

@@ -1,4 +1,4 @@
-import createElement from 'inferno-create-element';
+import React from 'react';
 
 import TopBar from './components/TopBar';
 import Main from './components/Main';
