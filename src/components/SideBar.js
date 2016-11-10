@@ -5,18 +5,35 @@ import { SCREEN_SIZE, PRIMARY_COLOR, SECONDARY_COLOR } from '../style';
 
 let styles;
 
-export default ({ children }) => (
-  <div style={styles.container}>
-    {children}
-  </div>
-);
+const SideBar = ({ children }) => {
+
+  const onDown = e => {
+    console.log('onDown sidebar', e);
+  }
+
+  const onClick = e => {
+    console.log('onClick sidebar', e);
+  }
+
+  return (
+    <div
+      style={styles.container}
+      onTouchStart={onDown}
+      onClick={onClick}
+    >
+      {children}
+    </div>
+  );
+}
+
+export default SideBar;
 
 export const SideBarTabs = () => (
   <div style={styles.tabs}>
-  <Icon css={styles.tabIcon} />
-  <Icon css={styles.tabIcon} />
-  <Icon css={styles.tabIcon} />
-  <Icon css={styles.tabIcon} />
+    <Icon css={styles.tabIcon} />
+    <Icon css={styles.tabIcon} />
+    <Icon css={styles.tabIcon} />
+    <Icon css={styles.tabIcon} />
   </div>
 );
 
@@ -24,9 +41,14 @@ styles = {
   container: {
     width: '280px',
     flexGrow: 1,
+    zIndex: 1,
     backgroundColor: SECONDARY_COLOR,
     ...(SCREEN_SIZE.smartphone && {
-      width: '0px',
+      zIndex: 0,
+      position: 'absolute',
+      height: '100%',
+      top: '52px',
+      left: 0
     })
   },
   tabs: {
