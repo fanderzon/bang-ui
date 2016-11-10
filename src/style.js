@@ -5,6 +5,7 @@ export const BORDER_COLOR = '#d9d9d9';
 export const HIGHLIGHT_COLOR = '#4083cf';
 export const PRIMARY_TEXT_COLOR = '#ffffff';
 export const SECONDARY_TEXT_COLOR = '#c0c6cf';
+export const HEADER_TEXT_COLOR = '#2f4361';
 export const SCREEN_SIZE = {
   desktop: false, // bigger than 991px
   tablet: false, // Between 768px and 991px

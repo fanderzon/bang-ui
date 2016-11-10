@@ -1,11 +1,11 @@
 import React from 'react';
 import { getInteractionEvents, getPointFromEvent } from '../util/event';
 
-import { TERTIARY_COLOR, BORDER_COLOR } from '../style';
+import { TERTIARY_COLOR, BORDER_COLOR, SCREEN_SIZE } from '../style';
 
 let styles;
 
-export default ({menuWidth = 280}) => {
+export default ({menuWidth = 280, children}) => {
   let element = null;
   let menuPosition = 0;
   let events = getInteractionEvents();
@@ -89,7 +89,9 @@ export default ({menuWidth = 280}) => {
       onAttached={onCreate}
       onWillDetach={onDestroy}
     >
-      <p>Coooooontent</p>
+      <div style={styles.content}>
+        {children}
+      </div>
     </div>
   );
 }
@@ -100,6 +102,13 @@ styles = {
     flexGrow: 4,
     zIndex: 1,
     backgroundColor: TERTIARY_COLOR,
-    transition: 'transform 0.2s'
+    transition: 'transform 0.2s',
+    padding: '20px 0px 0px 40px'
+  },
+  content: {
+    width: '500px',
+    ...(SCREEN_SIZE.smartphone && {
+      width: 'auto'
+    })
   }
 };

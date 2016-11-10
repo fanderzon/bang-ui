@@ -2,6 +2,7 @@ import React from 'react';
 
 import SideBar, { SideBarTabs, SideBarContent, SideBarSection, SideBarHeader, SideBarItem } from './SideBar';
 import Content from './Content';
+import Header from './Header';
 import { SCREEN_SIZE, TERTIARY_COLOR } from '../style';
 
 let styles;
@@ -45,7 +46,14 @@ export default () => {
           </SideBarSection>
         </SideBarContent>
       </SideBar>
-      <Content />
+      <Content>
+        <Header>Title</Header>
+        <p>Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Donec massa diam, accumsan non suscipit at,
+          congue sollicitudin sapien. Vestibulum commodo augue ut erat lobortis,
+          quis pharetra mi tincidunt. Nulla facilisi. Nunc quis quam a dui mollis tincidunt.
+        </p>
+      </Content>
     </div>
   );
 }
