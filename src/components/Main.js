@@ -1,10 +1,13 @@
 import React from 'react';
 
-import SideBar, { SideBarTabs } from './SideBar';
+import SideBar, { SideBarTabs, SideBarContent, SideBarSection, SideBarHeader, SideBarItem } from './SideBar';
 import Content from './Content';
 import { SCREEN_SIZE, TERTIARY_COLOR } from '../style';
 
 let styles;
+
+console.log('SideBarContent');
+console.log(SideBarContent);
 
 export default () => {
   let contentElement = null;
@@ -27,6 +30,20 @@ export default () => {
     <div style={styles.container}>
       <SideBar>
         <SideBarTabs />
+        <SideBarContent>
+          <SideBarSection>
+            <SideBarHeader icon="/static/settings.png">Settings</SideBarHeader>
+            <SideBarItem>Sub-Setting 1</SideBarItem>
+            <SideBarItem>Sub-Setting 2</SideBarItem>
+            <SideBarItem>Sub-Setting 3</SideBarItem>
+          </SideBarSection>
+          <SideBarSection>
+            <SideBarHeader icon="/static/settings.png">Settings</SideBarHeader>
+            <SideBarItem>Sub-Setting 1</SideBarItem>
+            <SideBarItem>Sub-Setting 2</SideBarItem>
+            <SideBarItem>Sub-Setting 3</SideBarItem>
+          </SideBarSection>
+        </SideBarContent>
       </SideBar>
       <Content />
     </div>

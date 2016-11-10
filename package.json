@@ -24,8 +24,10 @@
   "homepage": "https://github.com/fanderzon/bang-ui#readme",
   "dependencies": {
     "inferno": "0.7.27",
+    "inferno-component": "0.7.27",
     "inferno-create-element": "0.7.27",
-    "inferno-dom": "0.7.27"
+    "inferno-dom": "0.7.27",
+    "inferno-redux": "0.7.27"
   },
   "devDependencies": {
     "buble": "0.14.2",
