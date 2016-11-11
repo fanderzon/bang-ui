@@ -11,7 +11,7 @@ import {
 
 let styles;
 
-const SideBar = ({ children }) => {
+const Nav = ({ children }) => {
 
   const onDown = e => {
     console.log('onDown sidebar', e);
@@ -32,30 +32,31 @@ const SideBar = ({ children }) => {
   );
 }
 
-export default SideBar;
+export default Nav;
 
-export const SideBarTabs = () => (
-  <div style={styles.tabs}>
-    <Icon css={styles.tabIcon} />
-    <Icon css={styles.tabIcon} />
-    <Icon css={styles.tabIcon} />
-    <Icon css={styles.tabIcon} />
-  </div>
-);
-
-export const SideBarContent = ({children}) => (
+export const NavMenu = ({children}) => (
   <div style={styles.content}>
     {children}
   </div>
 );
 
-export const SideBarSection = ({children}) => (
+export const NavTabs = ({children}) => (
+  <div style={styles.tabs}>
+    {children}
+  </div>
+);
+
+export const NavTab = ({image, link}) => (
+  <Icon css={styles.tabIcon} image={image} link={link}  />
+);
+
+export const NavSection = ({children}) => (
   <div style={styles.section}>
     {children}
   </div>
 );
 
-export const SideBarHeader = ({icon = null, action = () => null, children}) => (
+export const NavHeader = ({icon = null, action = () => null, children}) => (
   <div style={styles.header} onClick={action}>
     <div style={styles.headerIconContainer}>
       {
@@ -68,7 +69,7 @@ export const SideBarHeader = ({icon = null, action = () => null, children}) => (
   </div>
 );
 
-export const SideBarItem = ({action = () => null, children}) => (
+export const NavItem = ({action = () => null, children}) => (
   <div style={styles.item} onClick={action}>
     <div style={styles.headerIconContainer}></div>
     {children}

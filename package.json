@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "jsnext:main": "dist/esnext.mjs",
   "watch": {
     "build": "src/**/*.*"
   },
@@ -10,14 +11,15 @@
     "build": "rollup -c",
     "start": "npm run build && node scripts/start.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "npm-watch"
+    "watch": "npm-watch",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fanderzon/bang-ui.git"
   },
   "author": "Fredrik Andersson <f.anderzon@gmail.com> (http://fredrik.anderzon.se)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/fanderzon/bang-ui/issues"
   },

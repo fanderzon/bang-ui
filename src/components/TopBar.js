@@ -1,13 +1,12 @@
 import React from 'react';
 
-import Icon from './Icon';
 import { TERTIARY_COLOR, BORDER_COLOR } from '../style';
 
 let styles;
 
-export default () => (
+export default ({children}) => (
   <div style={styles.container}>
-    <Icon image="/static/os.png" link="http://theverge.com" size={40} />
+    {children}
   </div>
 );
 
