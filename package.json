@@ -2,8 +2,8 @@
   "name": "bang-ui",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "jsnext:main": "dist/esnext.mjs",
+  "main": "dist/bang-ui.js",
+  "jsnext:main": "src/index.js",
   "watch": {
     "build": "src/**/*.*"
   },

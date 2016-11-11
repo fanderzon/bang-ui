@@ -26,6 +26,6 @@ export default {
     }),
     commonjs()
   ],
-  format: 'iife',
+  format: 'cjs',
   dest: 'dist/bang-ui.js'
 };
