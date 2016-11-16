@@ -131,7 +131,7 @@ styles = {
   },
   headerIconContainer: {
     width: '30px',
-    padding: '0px 5px 0px 5px'
+    padding: '0px 0px 0px 10px'
   },
   headerIcon: {
     width: '16px',
